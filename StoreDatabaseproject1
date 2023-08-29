@@ -1,0 +1,28 @@
+-create a store database
+
+CREATE TABLE items (id INTEGER PRIMARY KEY, item_name TEXT, quantity INTEGER, price_in_dollars INTEGER, aisle INTEGER);
+
+insert into items values (1, "Books", 5, 15, 1);
+insert into items values (2, "Notepads", 25, 5, 1);
+insert into items values (3, "planters", 13, 7, 3);
+insert into items values (4, "markers", 100, 2, 1);
+insert into items values (5, "pens", 250, 1, 1);
+insert into items values (6, "cards", 45, 3, 2);
+insert into items values (7, "stuffies", 6, 20, 4);
+insert into items values (8, "stickers", 500, 2, 2);
+insert into items values (9, "keychains", 10, 5, 4);
+insert into items values (10, "magnets", 17, 5, 4);
+insert into items values (11, "toys", 1, 25, 4);
+insert into items values (12, "hats", 5, 30, 5);
+insert into items values (13, "bookmarks", 25, 2, 1);
+insert into items values (14, "posters", 2, 15, 1);
+insert into items values (15, "vases", 5, 14, 3);
+
+-display total sum of stock
+select SUM(quantity) from items;
+
+-display items where price is less than 5 dollars in order 
+select * from items where price_in_dollars < 5 order by price_in_dollars;
+
+-display items where stock quantity is over 100 and in order
+select * from items where quantity > 100 order by quantity;
